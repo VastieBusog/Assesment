@@ -20,7 +20,7 @@ These are the instructions
 
 This quiz is a Science related quiz and will ask you some basic knowledge question.
 
-There 5 question and it will be a multiple answer quiz for example: A. 1 B. 2 C. 3 D. 4
+There 5 question and it will be a multiple answer quiz for example: 1. Mercury 2. Earth 3. Mars 3. Venus
 
 This is what its gonna look like when you do the quiz
 
@@ -36,19 +36,18 @@ questions = ("How many elements are in the periodic table?: ",
              "which planet in the solar system is the hottest?: ")
 
 # this is the mutliple choice for the user
-options = (("A. 116", "B. 117", "C. 118", "D. 119"),
-           ("A. Whale", "B. Crocodile", "C. Elephant", "D. Ostrich"),
-           ("A. Nitrogen ", "B. Oxygen", "C. Carbon-Dioxide", "D. Hydrogen"),
-           ("A. 206", "B. 207", "C. 208", "D. 209"),
-           ("A. Mercury", "B. Venus", "C. Earth", "D. Mars"))
+options = (("1. 116", "2. 117", "3. 118", "4. 119"),
+           ("1. Whale", "2. Crocodile", "3. Elephant", "4. Ostrich"),
+           ("1. Nitrogen ", "2. Oxygen", "3. Carbon-Dioxide", "4. Hydrogen"),
+           ("1. 206", "2. 207", "3. 208", "4. 209"),
+           ("1. Mercury", "2. Venus", "3. Earth", "4. Mars"))
 # this is the answers for each question in order
-answers = ("C", "D", "A", "A", "B",)
+answers = ("3", "4", "1", "1", "2",)
 guesses = []
 score: int = 0
 question_num = 0
 # Main Routine
 
-# todo introduce the game, ask the user if they want to see the instructions
 
 instructions_wanted = yes_no("do you want to read the instruction?")
 # instructions coding
@@ -61,7 +60,7 @@ for question in questions:
     for option in options[question_num]:
         print(option)
 
-    guess = input("Enter (A, B, C, D): ").upper()
+    guess = input("Enter (1, 2, 3, 4): ").upper()
     guesses.append(guess)
     if guess == answers[question_num]:
         score += 1
